@@ -11,14 +11,19 @@ class DynamicArray {
   }
 
   push(val) {
-
-    // Your code here
+    this.data[this.length] = val
+    this.length ++
   }
 
-
   pop() {
-
-    // Your code here
+    while(this.length > 0){
+    const removed = this.data[this.length - 1]
+    this.data[this.length - 1] = undefined
+    this.length --
+    return removed 
+    }
+    //If length is 0 we return undefined
+    return undefined   
   }
 
   shift() {
